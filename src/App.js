@@ -401,10 +401,10 @@ export default function App() {
               
               <div className="grid grid-cols-2 gap-3 flex-grow">
                 {[
-                  { url: 'https://imgur.com/a/NyLIa0I', caption: 'BASE Jumping' },
-                  { url: 'https://imgur.com/a/YVVNHwu', caption: 'Bungee Jumping' },
-                  { url: 'https://imgur.com/2SW3VEh', caption: 'Nile Cruise, Egypt' },
-                  { url: 'https://imgur.com/1yXoWJG', caption: 'Hot Air Balloon' }
+                  { url: 'https://i.imgur.com/NyLIa0I.jpg', caption: 'BASE Jumping' },
+                  { url: 'https://i.imgur.com/YVVNHwu.jpg', caption: 'Bungee Jumping' },
+                  { url: 'https://i.imgur.com/2SW3VEh.jpg', caption: 'Nile Cruise, Egypt' },
+                  { url: 'https://i.imgur.com/1yXoWJG.jpg', caption: 'Hot Air Balloon' }
                 ].map((photo, i) => (
                   <div key={i} className="group cursor-pointer">
                     <div className="aspect-square bg-slate-200 border-2 border-slate-300 hover:border-blue-700 transition-all overflow-hidden">
