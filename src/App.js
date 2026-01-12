@@ -176,7 +176,7 @@ export default function App() {
                 <div className="absolute -inset-4 border-4 border-blue-700 -rotate-3"></div>
                 <div className="absolute -inset-4 border-4 border-red-600 rotate-3"></div>
                 <img 
-                  src="https://cdn.jsdelivr.net/gh/user-attachments/assets/bridget-headshot.jpg"
+                  src="https://img1.wsimg.com/isteam/ip/42d1f331-6306-467a-8bad-04eced35181e/DSC_6227_00001.png"
                   alt="Bridget Silha"
                   className="relative w-72 h-72 sm:w-96 sm:h-96 object-cover shadow-2xl"
                 />
@@ -401,10 +401,10 @@ export default function App() {
               
               <div className="grid grid-cols-2 gap-3 flex-grow">
                 {[
-                  { url: 'your-image-url-1.jpg', caption: 'Skydiving' },
-                  { url: 'your-image-url-2.jpg', caption: 'Bungee Jumping' },
-                  { url: 'your-image-url-3.jpg', caption: 'Nile Cruise, Egypt' },
-                  { url: 'your-image-url-4.jpg', caption: 'Adventure' }
+                  { url: 'https://drive.google.com/uc?export=view&id=1Sd3FPYz-l5cjVRF4Hkbjnai9CMJScwvB', caption: 'BASE Jumping' },
+                  { url: 'https://drive.google.com/uc?export=view&id=1vLHQys8tSKGWiJxFJm7Q_KxPk6i-_9Gq', caption: 'Bungee Jumping' },
+                  { url: 'https://drive.google.com/uc?export=view&id=1ma7t05S8fpcb1t7g1cOuLIbTcB_s4Xx-', caption: 'Nile Cruise, Egypt' },
+                  { url: 'https://drive.google.com/uc?export=view&id=1aQTkfDLd7A3Mr2VakCwsT7T0lW9Vsxjh', caption: 'Hot Air Balloon' }
                 ].map((photo, i) => (
                   <div key={i} className="group cursor-pointer">
                     <div className="aspect-square bg-slate-200 border-2 border-slate-300 hover:border-blue-700 transition-all overflow-hidden">
