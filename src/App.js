@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Calendar, Mail, Linkedin, Github, ExternalLink, ChevronRight, BookOpen, BarChart3, Lightbulb, FileText } from 'lucide-react';
+import { Menu, X, Calendar, Mail, Linkedin, Github, ExternalLink, BookOpen, BarChart3, Lightbulb, FileText } from 'lucide-react';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -98,7 +98,7 @@ export default function App() {
                 </button>
               ))}
               <a
-                href="#"
+                href="https://drive.google.com/file/d/1wwehL024F7tROLNyS3gWA3qevL2u6nUM/view?usp=sharing"
                 className="text-slate-700 hover:text-blue-700 transition-colors font-medium uppercase text-sm tracking-wide flex items-center gap-1"
               >
                 <FileText size={16} />
@@ -139,7 +139,7 @@ export default function App() {
                 </button>
               ))}
               <a
-                href="#"
+                href="https://drive.google.com/file/d/1wwehL024F7tROLNyS3gWA3qevL2u6nUM/view?usp=sharing"
                 className="block w-full text-left text-slate-700 hover:text-blue-700 transition-colors py-2 font-medium uppercase text-sm tracking-wide flex items-center gap-2"
               >
                 <FileText size={16} />
@@ -217,7 +217,7 @@ export default function App() {
                   Let's Connect
                 </a>
                 <a
-                  href="#"
+                  href="https://drive.google.com/file/d/1wwehL024F7tROLNyS3gWA3qevL2u6nUM/view?usp=sharing"
                   className="border-2 border-slate-900 text-slate-900 px-8 py-4 font-bold hover:bg-slate-900 hover:text-white transition-all flex items-center gap-3 justify-center uppercase text-sm tracking-wide"
                 >
                   <FileText size={20} />
@@ -373,7 +373,7 @@ export default function App() {
               </div>
               
               <a
-                href={personalProject.link}
+                href="https://www.notion.so/Recipe-List-2e6358f3099780089e74ef0efff63a62?source=copy_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-slate-700 hover:text-slate-900 font-bold uppercase text-sm tracking-wide group-hover:gap-3 transition-all"
@@ -458,7 +458,7 @@ export default function App() {
             </a>
 
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1wwehL024F7tROLNyS3gWA3qevL2u6nUM/view?usp=sharing"
               className="flex items-center gap-4 p-8 bg-slate-800 hover:bg-slate-700 transition-all group border-2 border-slate-700"
             >
               <FileText className="text-white group-hover:scale-110 transition-transform" size={32} />
