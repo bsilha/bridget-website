@@ -478,7 +478,7 @@ export default function App() {
 
           <div className="flex gap-6 ml-12">
             <a
-              href="https://linkedin.com/in/bridgetsilha"
+              href="https://www.linkedin.com/in/bridget-silha/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-4 bg-slate-800 hover:bg-blue-700 transition-all text-white border-2 border-slate-700 hover:border-blue-700"
