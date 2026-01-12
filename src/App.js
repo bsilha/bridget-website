@@ -401,8 +401,8 @@ export default function App() {
               
               <div className="grid grid-cols-2 gap-3 flex-grow">
                 {[
-                  { url: 'https://i.imgur.com/NyLIa0I.jpg', caption: 'BASE Jumping' },
-                  { url: 'https://i.imgur.com/YVVNHwu.jpg', caption: 'Bungee Jumping' },
+                  { url: 'https://i.imgur.com/7L67Cjw.jpg', caption: 'BASE Jumping' },
+                  { url: 'https://i.imgur.com/rTvaVnx.jpg', caption: 'Bungee Jumping' },
                   { url: 'https://i.imgur.com/2SW3VEh.jpg', caption: 'Nile Cruise, Egypt' },
                   { url: 'https://i.imgur.com/1yXoWJG.jpg', caption: 'Hot Air Balloon' }
                 ].map((photo, i) => (
