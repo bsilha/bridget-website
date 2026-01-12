@@ -99,6 +99,8 @@ export default function App() {
               ))}
               <a
                 href="https://drive.google.com/file/d/1wwehL024F7tROLNyS3gWA3qevL2u6nUM/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-slate-700 hover:text-blue-700 transition-colors font-medium uppercase text-sm tracking-wide flex items-center gap-1"
               >
                 <FileText size={16} />
@@ -140,6 +142,8 @@ export default function App() {
               ))}
               <a
                 href="https://drive.google.com/file/d/1wwehL024F7tROLNyS3gWA3qevL2u6nUM/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block w-full text-left text-slate-700 hover:text-blue-700 transition-colors py-2 font-medium uppercase text-sm tracking-wide flex items-center gap-2"
               >
                 <FileText size={16} />
@@ -218,6 +222,8 @@ export default function App() {
                 </a>
                 <a
                   href="https://drive.google.com/file/d/1wwehL024F7tROLNyS3gWA3qevL2u6nUM/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="border-2 border-slate-900 text-slate-900 px-8 py-4 font-bold hover:bg-slate-900 hover:text-white transition-all flex items-center gap-3 justify-center uppercase text-sm tracking-wide"
                 >
                   <FileText size={20} />
@@ -235,6 +241,35 @@ export default function App() {
           <div className="border-l-4 border-red-600 pl-8">
             <p className="text-2xl sm:text-3xl font-light leading-relaxed">
               Making <span className="font-bold">data-driven insights</span> understandable and actionable for decision-makers and the public
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* My Story Section - Documentary style */}
+      <section id="story" className="py-24 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="border-l-4 border-blue-700 pl-8 mb-12">
+            <h2 className="text-5xl sm:text-6xl font-black text-slate-900 tracking-tight">
+              MY STORY
+            </h2>
+          </div>
+          
+          <div className="ml-12 space-y-6">
+            <p className="text-xl text-slate-700 leading-relaxed font-light">
+              I'm passionate about <span className="font-bold">bridging the gap</span> between complex policy issues, cutting-edge technology, and accessible design. My work focuses on making data-driven insights understandable and actionable for decision-makers and the public.
+            </p>
+            
+            <div className="h-1 w-16 bg-red-600 my-8"></div>
+            
+            <p className="text-xl text-slate-700 leading-relaxed font-light">
+              With a background spanning political science, data analytics, and technical implementation, I bring a <span className="font-bold">unique perspective</span> to projects at the intersection of government, technology, and society. From analyzing voting systems to building predictive models, I'm committed to using technology to strengthen democratic institutions and inform better policy decisions.
+            </p>
+            
+            <div className="h-1 w-16 bg-red-600 my-8"></div>
+            
+            <p className="text-xl text-slate-700 leading-relaxed font-light">
+              Whether it's through machine learning, data visualization, or policy research, I believe in the power of <span className="font-bold">clear, honest analysis</span> to drive meaningful change.
             </p>
           </div>
         </div>
@@ -303,36 +338,9 @@ export default function App() {
         </div>
       </section>
 
-      {/* My Story Section - Documentary style */}
-      <section id="story" className="py-24 px-6 bg-white">
+      {/* Personal Section - Beyond the Data */}
+      <section className="py-24 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="border-l-4 border-blue-700 pl-8 mb-12">
-            <h2 className="text-5xl sm:text-6xl font-black text-slate-900 tracking-tight">
-              MY STORY
-            </h2>
-          </div>
-          
-          <div className="ml-12 space-y-6">
-            <p className="text-xl text-slate-700 leading-relaxed font-light">
-              I'm passionate about <span className="font-bold">bridging the gap</span> between complex policy issues, cutting-edge technology, and accessible design. My work focuses on making data-driven insights understandable and actionable for decision-makers and the public.
-            </p>
-            
-            <div className="h-1 w-16 bg-red-600 my-8"></div>
-            
-            <p className="text-xl text-slate-700 leading-relaxed font-light">
-              With a background spanning political science, data analytics, and technical implementation, I bring a <span className="font-bold">unique perspective</span> to projects at the intersection of government, technology, and society. From analyzing voting systems to building predictive models, I'm committed to using technology to strengthen democratic institutions and inform better policy decisions.
-            </p>
-            
-            <div className="h-1 w-16 bg-red-600 my-8"></div>
-            
-            <p className="text-xl text-slate-700 leading-relaxed font-light">
-              Whether it's through machine learning, data visualization, or policy research, I believe in the power of <span className="font-bold">clear, honest analysis</span> to drive meaningful change.
-            </p>
-          </div>
-        </div>
-
-        {/* Personal Section - After Story */}
-        <div className="max-w-5xl mx-auto mt-16 pt-12 border-t-2 border-slate-200">
           <div className="mb-12 ml-12">
             <div className="border-l-4 border-slate-400 pl-8">
               <h3 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-3">
@@ -459,6 +467,8 @@ export default function App() {
 
             <a
               href="https://drive.google.com/file/d/1wwehL024F7tROLNyS3gWA3qevL2u6nUM/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-4 p-8 bg-slate-800 hover:bg-slate-700 transition-all group border-2 border-slate-700"
             >
               <FileText className="text-white group-hover:scale-110 transition-transform" size={32} />
