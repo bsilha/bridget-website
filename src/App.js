@@ -71,8 +71,8 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Decorative header stripe - government inspired */}
-      <div className="h-2 bg-gradient-to-r from-blue-900 via-red-600 to-blue-900"></div>
+      {/* Decorative header stripe - colorblind friendly with pattern */}
+      <div className="h-2 bg-gradient-to-r from-blue-900 via-orange-600 to-blue-900"></div>
       
       {/* Navigation */}
       <nav className="sticky top-0 w-full bg-white z-50 border-b-2 border-slate-200">
@@ -176,17 +176,17 @@ export default function App() {
             {/* Left side - Photo with geometric frame */}
             <div className="order-2 lg:order-1 flex justify-center">
               <div className="relative">
-                {/* Geometric frame elements */}
+                {/* Geometric frame elements - high contrast borders */}
                 <div className="absolute -inset-4 border-4 border-blue-700 -rotate-3"></div>
-                <div className="absolute -inset-4 border-4 border-red-600 rotate-3"></div>
+                <div className="absolute -inset-4 border-4 border-orange-600 rotate-3"></div>
                 <img 
                   src="https://img1.wsimg.com/isteam/ip/42d1f331-6306-467a-8bad-04eced35181e/DSC_6227_00001.png"
                   alt="Bridget Silha"
                   className="relative w-72 h-72 sm:w-96 sm:h-96 object-cover shadow-2xl"
                 />
-                {/* Corner accents */}
+                {/* Corner accents - distinct colors */}
                 <div className="absolute -top-2 -left-2 w-8 h-8 bg-blue-700"></div>
-                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-red-600"></div>
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-orange-600"></div>
               </div>
             </div>
             
@@ -238,7 +238,7 @@ export default function App() {
       {/* Impact Statement - Bold divider section */}
       <section className="bg-slate-900 text-white py-16 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="border-l-4 border-red-600 pl-8">
+          <div className="border-l-4 border-orange-500 pl-8">
             <p className="text-2xl sm:text-3xl font-light leading-relaxed">
               Making <span className="font-bold">data-driven insights</span> understandable and actionable for decision-makers and the public
             </p>
@@ -260,13 +260,13 @@ export default function App() {
               I'm passionate about <span className="font-bold">bridging the gap</span> between complex policy issues, cutting-edge technology, and accessible design. My work focuses on making data-driven insights understandable and actionable for decision-makers and the public.
             </p>
             
-            <div className="h-1 w-16 bg-red-600 my-8"></div>
+            <div className="h-1 w-16 bg-orange-600 my-8"></div>
             
             <p className="text-xl text-slate-700 leading-relaxed font-light">
               With a background spanning political science, data analytics, and technical implementation, I bring a <span className="font-bold">unique perspective</span> to projects at the intersection of government, technology, and society. From analyzing voting systems to building predictive models, I'm committed to using technology to strengthen democratic institutions and inform better policy decisions.
             </p>
             
-            <div className="h-1 w-16 bg-red-600 my-8"></div>
+            <div className="h-1 w-16 bg-orange-600 my-8"></div>
             
             <p className="text-xl text-slate-700 leading-relaxed font-light">
               Whether it's through machine learning, data visualization, or policy research, I believe in the power of <span className="font-bold">clear, honest analysis</span> to drive meaningful change.
@@ -295,8 +295,8 @@ export default function App() {
                 key={index}
                 className="bg-white border-2 border-slate-200 hover:border-blue-700 transition-all group relative overflow-hidden"
               >
-                {/* Colored top stripe */}
-                <div className="h-2 bg-gradient-to-r from-blue-700 to-red-600"></div>
+                {/* Colored top stripe - high contrast pattern */}
+                <div className="h-2 bg-gradient-to-r from-blue-700 to-orange-600"></div>
                 
                 <div className="p-6">
                   <div className="mb-4 text-blue-700 group-hover:scale-110 transition-transform inline-block">
@@ -326,7 +326,7 @@ export default function App() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-900 font-bold uppercase text-sm tracking-wide group-hover:gap-3 transition-all"
+                    className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-900 font-bold uppercase text-sm tracking-wide group-hover:gap-3 transition-all underline decoration-2 underline-offset-4"
                   >
                     Read More
                     <ExternalLink size={16} />
@@ -384,7 +384,7 @@ export default function App() {
                 href="https://www.notion.so/Recipe-List-2e6358f3099780089e74ef0efff63a62?source=copy_link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-slate-700 hover:text-slate-900 font-bold uppercase text-sm tracking-wide group-hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-slate-700 hover:text-slate-900 font-bold uppercase text-sm tracking-wide group-hover:gap-3 transition-all underline decoration-2 underline-offset-4"
               >
                 View Recipes
                 <ExternalLink size={16} />
@@ -478,7 +478,7 @@ export default function App() {
 
           <div className="flex gap-6 ml-12">
             <a
-              href="https://www.linkedin.com/in/bridget-silha/"
+              href="https://linkedin.com/in/bridgetsilha"
               target="_blank"
               rel="noopener noreferrer"
               className="p-4 bg-slate-800 hover:bg-blue-700 transition-all text-white border-2 border-slate-700 hover:border-blue-700"
