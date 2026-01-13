@@ -204,7 +204,7 @@ export default function App() {
                 WELCOME
               </h1>
               
-              <div className="h-1 w-24 bg-red-600 mb-8"></div>
+              <div className="h-1 w-24 bg-orange-600 mb-8"></div>
               
               <p className="text-xl sm:text-2xl text-slate-700 mb-10 leading-relaxed font-light">
                 I work at the <span className="font-bold text-blue-700">intersection</span> of government policy, technology, and simplistic design
@@ -249,10 +249,13 @@ export default function App() {
       {/* My Story Section - Documentary style */}
       <section id="story" className="py-24 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="border-l-4 border-blue-700 pl-8 mb-12">
-            <h2 className="text-5xl sm:text-6xl font-black text-slate-900 tracking-tight">
-              MY STORY
-            </h2>
+          <div className="mb-12">
+            <div className="border-l-4 border-blue-700 pl-8">
+              <h2 className="text-5xl sm:text-7xl font-black text-slate-900 tracking-tight leading-none mb-6">
+                MY STORY
+              </h2>
+              <div className="h-1 w-24 bg-orange-600"></div>
+            </div>
           </div>
           
           <div className="ml-12 space-y-6">
@@ -279,12 +282,13 @@ export default function App() {
       <section id="projects" className="py-24 px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
-            <div className="border-l-4 border-blue-700 pl-8 mb-4">
-              <h2 className="text-5xl sm:text-6xl font-black text-slate-900 tracking-tight">
+            <div className="border-l-4 border-blue-700 pl-8 mb-6">
+              <h2 className="text-5xl sm:text-7xl font-black text-slate-900 tracking-tight leading-none mb-6">
                 PROJECTS
               </h2>
+              <div className="h-1 w-24 bg-orange-600"></div>
             </div>
-            <p className="text-xl text-slate-600 max-w-3xl ml-12 font-light">
+            <p className="text-xl text-slate-600 max-w-3xl pl-12 font-light">
               Exploring data, policy, and technology through analytical research and creative solutions
             </p>
           </div>
@@ -341,18 +345,19 @@ export default function App() {
       {/* Personal Section - Beyond the Data */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="mb-12 ml-12">
-            <div className="border-l-4 border-slate-400 pl-8">
-              <h3 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-3">
+          <div className="mb-12">
+            <div className="border-l-4 border-blue-700 pl-8">
+              <h3 className="text-5xl sm:text-7xl font-black text-slate-900 tracking-tight leading-none mb-6">
                 BEYOND THE DATA
               </h3>
+              <div className="h-1 w-24 bg-orange-600 mb-6"></div>
               <p className="text-lg text-slate-600 font-light">
                 When I'm not analyzing policy and building solutions, you'll find me in the kitchen or seeking adventure around the world
               </p>
             </div>
           </div>
           
-          <div className="ml-12 grid md:grid-cols-2 gap-8">
+          <div className="pl-12 grid md:grid-cols-2 gap-8">
             {/* Recipe Collection */}
             <div className="bg-gradient-to-br from-slate-50 to-blue-50 border-2 border-slate-200 hover:border-slate-300 transition-all p-8 group h-full flex flex-col">
               <div className="mb-4">
@@ -436,17 +441,20 @@ export default function App() {
       {/* Contact Section - Bold and direct */}
       <section id="contact" className="py-24 px-6 bg-slate-900 text-white">
         <div className="max-w-5xl mx-auto">
-          <div className="border-l-4 border-red-600 pl-8 mb-12">
-            <h2 className="text-5xl sm:text-6xl font-black tracking-tight">
-              GET IN TOUCH
-            </h2>
+          <div className="mb-12">
+            <div className="border-l-4 border-orange-500 pl-8">
+              <h2 className="text-5xl sm:text-7xl font-black tracking-tight leading-none mb-6">
+                GET IN TOUCH
+              </h2>
+              <div className="h-1 w-24 bg-orange-600"></div>
+            </div>
           </div>
           
-          <p className="text-xl text-slate-300 mb-12 ml-12 font-light">
+          <p className="text-xl text-slate-300 mb-12 pl-12 font-light">
             Interested in collaboration or have a project in mind? I'd love to hear from you.
           </p>
           
-          <div className="grid sm:grid-cols-3 gap-6 ml-12 mb-12">
+          <div className="grid sm:grid-cols-3 gap-6 pl-12 mb-12">
             <a
               href="https://calendar.app.google/9ihLWw3LjqMUXzqz5"
               target="_blank"
@@ -476,7 +484,7 @@ export default function App() {
             </a>
           </div>
 
-          <div className="flex gap-6 ml-12">
+          <div className="flex justify-center gap-6 pl-12">
             <a
               href="https://linkedin.com/in/bridgetsilha"
               target="_blank"
