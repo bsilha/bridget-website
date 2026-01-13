@@ -88,17 +88,23 @@ export default function App() {
             
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
-              {['Home', 'Story', 'Projects', 'Contact'].map((item) => (
+              {[
+                { label: 'Home', id: 'home' },
+                { label: 'My Story', id: 'story' },
+                { label: 'Projects', id: 'projects' },
+                { label: 'Beyond the Data', id: 'beyond' },
+                { label: 'Contact', id: 'contact' }
+              ].map((item) => (
                 <button
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
                   className="text-slate-700 hover:text-blue-700 transition-colors font-medium uppercase text-sm tracking-wide"
                 >
-                  {item}
+                  {item.label}
                 </button>
               ))}
               <a
-                href="https://drive.google.com/file/d/1wwehL024F7tROLNyS3gWA3qevL2u6nUM/view?usp=sharing"
+                href="https://drive.google.com/file/d/1J22Ys32XLbnkupM23UZDD_djRIpwFDeI/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-700 hover:text-blue-700 transition-colors font-medium uppercase text-sm tracking-wide flex items-center gap-1"
@@ -131,17 +137,23 @@ export default function App() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-t-2 border-slate-200">
             <div className="px-6 py-4 space-y-3">
-              {['Home', 'Story', 'Projects', 'Contact'].map((item) => (
+              {[
+                { label: 'Home', id: 'home' },
+                { label: 'My Story', id: 'story' },
+                { label: 'Projects', id: 'projects' },
+                { label: 'Beyond the Data', id: 'beyond' },
+                { label: 'Contact', id: 'contact' }
+              ].map((item) => (
                 <button
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
                   className="block w-full text-left text-slate-700 hover:text-blue-700 transition-colors py-2 font-medium uppercase text-sm tracking-wide"
                 >
-                  {item}
+                  {item.label}
                 </button>
               ))}
               <a
-                href="https://drive.google.com/file/d/1wwehL024F7tROLNyS3gWA3qevL2u6nUM/view?usp=sharing"
+                href="https://drive.google.com/file/d/1J22Ys32XLbnkupM23UZDD_djRIpwFDeI/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-left text-slate-700 hover:text-blue-700 transition-colors py-2 font-medium uppercase text-sm tracking-wide flex items-center gap-2"
@@ -216,7 +228,7 @@ export default function App() {
                   Let's Connect
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1wwehL024F7tROLNyS3gWA3qevL2u6nUM/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1J22Ys32XLbnkupM23UZDD_djRIpwFDeI/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border-2 border-slate-900 text-slate-900 px-8 py-4 font-bold hover:bg-slate-900 hover:text-white transition-all flex items-center gap-3 justify-center uppercase text-sm tracking-wide"
@@ -333,7 +345,7 @@ export default function App() {
       </section>
 
       {/* Beyond the Data Section */}
-      <section className="py-24 px-6 bg-white">
+      <section id="beyond" className="py-24 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="border-l-4 border-blue-700 pl-8 mb-12">
             <h3 className="text-5xl sm:text-7xl font-black text-slate-900 tracking-tight leading-none mb-6">
@@ -345,65 +357,79 @@ export default function App() {
             </p>
           </div>
           
-          <div className="border-l-4 border-transparent pl-8 grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-slate-50 to-blue-50 border-2 border-slate-200 hover:border-slate-300 transition-all p-8 group h-full flex flex-col">
-              <div className="mb-4">
-                <div className="inline-block p-3 bg-white rounded-lg mb-4">
-                  <BookOpen className="text-blue-700" size={28} />
+          <div className="border-l-4 border-transparent pl-8 space-y-12">
+            {/* Recipe Collection - Compact */}
+            <div className="bg-gradient-to-br from-slate-50 to-blue-50 border-2 border-slate-200 hover:border-slate-300 transition-all p-6">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="p-3 bg-white rounded-lg">
+                    <BookOpen className="text-blue-700" size={28} />
+                  </div>
+                </div>
+                
+                <div className="flex-grow">
+                  <h4 className="text-2xl font-bold text-slate-900 mb-2 tracking-tight">
+                    Recipe Collection
+                  </h4>
+                  
+                  <p className="text-slate-600 mb-3 leading-relaxed">
+                    {personalProject.description}
+                  </p>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="flex gap-2 flex-wrap">
+                      {personalProject.tags.map((tag, i) => (
+                        <span
+                          key={i}
+                          className="text-xs px-3 py-1 bg-white text-slate-600 font-medium uppercase tracking-wide"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <a
+                      href={personalProject.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-slate-700 hover:text-slate-900 font-bold uppercase text-sm tracking-wide hover:gap-3 transition-all underline decoration-2 underline-offset-4 whitespace-nowrap"
+                    >
+                      View Recipes
+                      <ExternalLink size={16} />
+                    </a>
+                  </div>
                 </div>
               </div>
-              
-              <h4 className="text-2xl font-bold text-slate-900 mb-3 tracking-tight">
-                Recipe Collection
-              </h4>
-              
-              <p className="text-slate-600 mb-4 leading-relaxed flex-grow">
-                {personalProject.description}
-              </p>
-              
-              <div className="flex gap-2 flex-wrap mb-6">
-                {personalProject.tags.map((tag, i) => (
-                  <span
-                    key={i}
-                    className="text-xs px-3 py-1 bg-white text-slate-600 font-medium uppercase tracking-wide"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              
-              <a
-                href={personalProject.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-slate-700 hover:text-slate-900 font-bold uppercase text-sm tracking-wide group-hover:gap-3 transition-all underline decoration-2 underline-offset-4"
-              >
-                View Recipes
-                <ExternalLink size={16} />
-              </a>
             </div>
 
-            <div className="bg-gradient-to-br from-slate-50 to-blue-50 border-2 border-slate-200 p-8 h-full flex flex-col">
-              <div className="mb-4">
-                <div className="inline-block p-3 bg-white rounded-lg mb-4">
-                  <Lightbulb className="text-blue-700" size={28} />
+            {/* Adventures - Compact horizontal gallery */}
+            <div className="bg-gradient-to-br from-slate-50 to-blue-50 border-2 border-slate-200 p-6">
+              <div className="flex items-start gap-6 mb-6">
+                <div className="flex-shrink-0">
+                  <div className="p-3 bg-white rounded-lg">
+                    <Lightbulb className="text-blue-700" size={28} />
+                  </div>
+                </div>
+                
+                <div>
+                  <h4 className="text-2xl font-bold text-slate-900 mb-2 tracking-tight">
+                    Adventures
+                  </h4>
+                  
+                  <p className="text-slate-600 leading-relaxed">
+                    From BASE jumping to exploring ancient civilizations - embracing experiences that push boundaries
+                  </p>
                 </div>
               </div>
               
-              <h4 className="text-2xl font-bold text-slate-900 mb-3 tracking-tight">
-                Adventures
-              </h4>
-              
-              <p className="text-slate-600 mb-6 leading-relaxed">
-                From skydiving to exploring ancient civilizations - embracing experiences that push boundaries
-              </p>
-              
-              <div className="grid grid-cols-2 gap-3 flex-grow">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {[
-                  { url: 'https://i.imgur.com/7L67Cjw.jpg', caption: 'BASE Jumping' },
-                  { url: 'https://i.imgur.com/rTvaVnx.jpg', caption: 'Bungee Jumping' },
-                  { url: 'https://i.imgur.com/2SW3VEh.jpg', caption: 'Nile Cruise, Egypt' },
-                  { url: 'https://i.imgur.com/1yXoWJG.jpg', caption: 'Hot Air Balloon' }
+                  { url: 'https://i.imgur.com/7L67Cjw.jpg', caption: 'BASE Jumping (Twin Falls, ID)' },
+                  { url: 'https://i.imgur.com/rTvaVnx.jpg', caption: 'Bungee Jumping (Canada)' },
+                  { url: 'https://i.imgur.com/2SW3VEh.jpg', caption: 'Nile Cruise (Egypt)' },
+                  { url: 'https://i.imgur.com/1yXoWJG.jpg', caption: 'Hot Air Balloon (Phoenix, AZ)' },
+                  { url: 'https://i.imgur.com/M1Jkj4d.jpg', caption: 'Paragliding (La Jolla, CA)' },
+                  { url: 'https://i.imgur.com/bsxsDxh.jpg', caption: 'Skydiving (Midland, VA)' }
                 ].map((photo, i) => (
                   <div key={i} className="group cursor-pointer">
                     <div className="aspect-square bg-slate-200 border-2 border-slate-300 hover:border-blue-700 transition-all overflow-hidden">
@@ -413,7 +439,7 @@ export default function App() {
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                       />
                     </div>
-                    <p className="text-xs text-slate-600 mt-2 uppercase tracking-wide font-medium">
+                    <p className="text-xs text-slate-600 mt-2 uppercase tracking-wide font-medium text-center">
                       {photo.caption}
                     </p>
                   </div>
@@ -459,7 +485,7 @@ export default function App() {
               </a>
 
               <a
-                href="https://drive.google.com/file/d/1wwehL024F7tROLNyS3gWA3qevL2u6nUM/view?usp=sharing"
+                href="https://drive.google.com/file/d/1J22Ys32XLbnkupM23UZDD_djRIpwFDeI/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-8 bg-slate-800 hover:bg-slate-700 transition-all group border-2 border-slate-700"
@@ -471,7 +497,7 @@ export default function App() {
 
             <div className="flex justify-center gap-6">
               <a
-                href="https://linkedin.com/in/bridgetsilha"
+                href="https://www.linkedin.com/in/bridget-silha/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 bg-slate-800 hover:bg-blue-700 transition-all text-white border-2 border-slate-700 hover:border-blue-700"
