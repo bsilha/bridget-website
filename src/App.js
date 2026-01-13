@@ -281,16 +281,16 @@ export default function App() {
       {/* Projects Section - Grid with structured cards */}
       <section id="projects" className="py-24 px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16">
+          <div className="mb-16 max-w-5xl">
             <div className="border-l-4 border-blue-700 pl-8 mb-6">
               <h2 className="text-5xl sm:text-7xl font-black text-slate-900 tracking-tight leading-none mb-6">
                 PROJECTS
               </h2>
-              <div className="h-1 w-24 bg-orange-600"></div>
+              <div className="h-1 w-24 bg-orange-600 mb-6"></div>
+              <p className="text-xl text-slate-600 font-light">
+                Exploring data, policy, and technology through analytical research and creative solutions
+              </p>
             </div>
-            <p className="text-xl text-slate-600 max-w-3xl pl-12 font-light">
-              Exploring data, policy, and technology through analytical research and creative solutions
-            </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -351,7 +351,7 @@ export default function App() {
                 BEYOND THE DATA
               </h3>
               <div className="h-1 w-24 bg-orange-600 mb-6"></div>
-              <p className="text-lg text-slate-600 font-light">
+              <p className="text-xl text-slate-600 font-light">
                 When I'm not analyzing policy and building solutions, you'll find me in the kitchen or seeking adventure around the world
               </p>
             </div>
