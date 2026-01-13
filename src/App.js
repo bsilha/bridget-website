@@ -65,13 +65,13 @@ export default function App() {
   const personalProject = {
     title: "Notion Recipe Collection",
     description: "Documenting my baking experiments with the same analytical rigor I bring to policy research - because good data practices apply everywhere",
-    link: "#",
+    link: "https://www.notion.so/Recipe-List-2e6358f3099780089e74ef0efff63a62?source=copy_link",
     tags: ["Personal", "For Fun"]
   };
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Decorative header stripe - colorblind friendly with pattern */}
+      {/* Decorative header stripe - colorblind friendly */}
       <div className="h-2 bg-gradient-to-r from-blue-900 via-orange-600 to-blue-900"></div>
       
       {/* Navigation */}
@@ -88,7 +88,7 @@ export default function App() {
             
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
-              {['Home', 'Projects', 'Story', 'Contact'].map((item) => (
+              {['Home', 'Story', 'Projects', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -131,7 +131,7 @@ export default function App() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-t-2 border-slate-200">
             <div className="px-6 py-4 space-y-3">
-              {['Home', 'Projects', 'Story', 'Contact'].map((item) => (
+              {['Home', 'Story', 'Projects', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -162,21 +162,18 @@ export default function App() {
         )}
       </nav>
 
-      {/* Hero Section - Bold, Structured Layout */}
+      {/* Hero Section */}
       <section id="home" className="relative overflow-hidden">
-        {/* Background geometric shapes */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-          <div className="absolute top-0 left-0 w-96 h-96 bg-red-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+          <div className="absolute top-0 left-0 w-96 h-96 bg-orange-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
           <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-slate-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left side - Photo with geometric frame */}
             <div className="order-2 lg:order-1 flex justify-center">
               <div className="relative">
-                {/* Geometric frame elements - high contrast borders */}
                 <div className="absolute -inset-4 border-4 border-blue-700 -rotate-3"></div>
                 <div className="absolute -inset-4 border-4 border-orange-600 rotate-3"></div>
                 <img 
@@ -184,13 +181,11 @@ export default function App() {
                   alt="Bridget Silha"
                   className="relative w-72 h-72 sm:w-96 sm:h-96 object-cover shadow-2xl"
                 />
-                {/* Corner accents - distinct colors */}
                 <div className="absolute -top-2 -left-2 w-8 h-8 bg-blue-700"></div>
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-orange-600"></div>
               </div>
             </div>
             
-            {/* Right side - Content with government-style typography */}
             <div className="order-1 lg:order-2">
               <div className="mb-6">
                 <div className="inline-block border-l-4 border-blue-700 pl-4">
@@ -235,7 +230,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Impact Statement - Bold divider section */}
+      {/* Impact Statement */}
       <section className="bg-slate-900 text-white py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="border-l-4 border-orange-500 pl-8">
@@ -246,19 +241,17 @@ export default function App() {
         </div>
       </section>
 
-      {/* My Story Section - Documentary style */}
+      {/* My Story Section */}
       <section id="story" className="py-24 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="mb-12">
-            <div className="border-l-4 border-blue-700 pl-8">
-              <h2 className="text-5xl sm:text-7xl font-black text-slate-900 tracking-tight leading-none mb-6">
-                MY STORY
-              </h2>
-              <div className="h-1 w-24 bg-orange-600"></div>
-            </div>
+          <div className="border-l-4 border-blue-700 pl-8 mb-12">
+            <h2 className="text-5xl sm:text-7xl font-black text-slate-900 tracking-tight leading-none mb-6">
+              MY STORY
+            </h2>
+            <div className="h-1 w-24 bg-orange-600"></div>
           </div>
           
-          <div className="ml-12 space-y-6">
+          <div className="border-l-4 border-transparent pl-8 space-y-6">
             <p className="text-xl text-slate-700 leading-relaxed font-light">
               I'm passionate about <span className="font-bold">bridging the gap</span> between complex policy issues, cutting-edge technology, and accessible design. My work focuses on making data-driven insights understandable and actionable for decision-makers and the public.
             </p>
@@ -278,28 +271,25 @@ export default function App() {
         </div>
       </section>
 
-      {/* Projects Section - Grid with structured cards */}
+      {/* Projects Section */}
       <section id="projects" className="py-24 px-6 bg-slate-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-16 max-w-5xl">
-            <div className="border-l-4 border-blue-700 pl-8 mb-6">
-              <h2 className="text-5xl sm:text-7xl font-black text-slate-900 tracking-tight leading-none mb-6">
-                PROJECTS
-              </h2>
-              <div className="h-1 w-24 bg-orange-600 mb-6"></div>
-              <p className="text-xl text-slate-600 font-light">
-                Exploring data, policy, and technology through analytical research and creative solutions
-              </p>
-            </div>
+        <div className="max-w-5xl mx-auto">
+          <div className="border-l-4 border-blue-700 pl-8 mb-16">
+            <h2 className="text-5xl sm:text-7xl font-black text-slate-900 tracking-tight leading-none mb-6">
+              PROJECTS
+            </h2>
+            <div className="h-1 w-24 bg-orange-600 mb-6"></div>
+            <p className="text-xl text-slate-600 font-light">
+              Exploring data, policy, and technology through analytical research and creative solutions
+            </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="border-l-4 border-transparent pl-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <div
                 key={index}
                 className="bg-white border-2 border-slate-200 hover:border-blue-700 transition-all group relative overflow-hidden"
               >
-                {/* Colored top stripe - high contrast pattern */}
                 <div className="h-2 bg-gradient-to-r from-blue-700 to-orange-600"></div>
                 
                 <div className="p-6">
@@ -342,23 +332,20 @@ export default function App() {
         </div>
       </section>
 
-      {/* Personal Section - Beyond the Data */}
+      {/* Beyond the Data Section */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="mb-12">
-            <div className="border-l-4 border-blue-700 pl-8">
-              <h3 className="text-5xl sm:text-7xl font-black text-slate-900 tracking-tight leading-none mb-6">
-                BEYOND THE DATA
-              </h3>
-              <div className="h-1 w-24 bg-orange-600 mb-6"></div>
-              <p className="text-xl text-slate-600 font-light">
-                When I'm not analyzing policy and building solutions, you'll find me in the kitchen or seeking adventure around the world
-              </p>
-            </div>
+          <div className="border-l-4 border-blue-700 pl-8 mb-12">
+            <h3 className="text-5xl sm:text-7xl font-black text-slate-900 tracking-tight leading-none mb-6">
+              BEYOND THE DATA
+            </h3>
+            <div className="h-1 w-24 bg-orange-600 mb-6"></div>
+            <p className="text-xl text-slate-600 font-light">
+              When I'm not analyzing policy and building solutions, you'll find me in the kitchen or seeking adventure around the world
+            </p>
           </div>
           
-          <div className="pl-12 grid md:grid-cols-2 gap-8">
-            {/* Recipe Collection */}
+          <div className="border-l-4 border-transparent pl-8 grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-slate-50 to-blue-50 border-2 border-slate-200 hover:border-slate-300 transition-all p-8 group h-full flex flex-col">
               <div className="mb-4">
                 <div className="inline-block p-3 bg-white rounded-lg mb-4">
@@ -386,7 +373,7 @@ export default function App() {
               </div>
               
               <a
-                href="https://www.notion.so/Recipe-List-2e6358f3099780089e74ef0efff63a62?source=copy_link"
+                href={personalProject.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-slate-700 hover:text-slate-900 font-bold uppercase text-sm tracking-wide group-hover:gap-3 transition-all underline decoration-2 underline-offset-4"
@@ -396,7 +383,6 @@ export default function App() {
               </a>
             </div>
 
-            {/* Adventure Gallery */}
             <div className="bg-gradient-to-br from-slate-50 to-blue-50 border-2 border-slate-200 p-8 h-full flex flex-col">
               <div className="mb-4">
                 <div className="inline-block p-3 bg-white rounded-lg mb-4">
@@ -438,71 +424,71 @@ export default function App() {
         </div>
       </section>
 
-      {/* Contact Section - Bold and direct */}
+      {/* Contact Section */}
       <section id="contact" className="py-24 px-6 bg-slate-900 text-white">
         <div className="max-w-5xl mx-auto">
-          <div className="mb-12">
-            <div className="border-l-4 border-orange-500 pl-8">
-              <h2 className="text-5xl sm:text-7xl font-black tracking-tight leading-none mb-6">
-                GET IN TOUCH
-              </h2>
-              <div className="h-1 w-24 bg-orange-600"></div>
-            </div>
+          <div className="border-l-4 border-orange-500 pl-8 mb-12">
+            <h2 className="text-5xl sm:text-7xl font-black tracking-tight leading-none mb-6">
+              GET IN TOUCH
+            </h2>
+            <div className="h-1 w-24 bg-orange-600"></div>
           </div>
           
-          <p className="text-xl text-slate-300 mb-12 pl-12 font-light">
-            Interested in collaboration or have a project in mind? I'd love to hear from you.
-          </p>
-          
-          <div className="grid sm:grid-cols-3 gap-6 pl-12 mb-12">
-            <a
-              href="https://calendar.app.google/9ihLWw3LjqMUXzqz5"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-4 p-8 bg-blue-700 hover:bg-blue-600 transition-all group border-2 border-blue-700"
-            >
-              <Calendar className="text-white group-hover:scale-110 transition-transform" size={32} />
-              <span className="text-white font-bold uppercase tracking-wide">Schedule Call</span>
-            </a>
+          <div className="border-l-4 border-transparent pl-8">
+            <p className="text-xl text-slate-300 mb-12 font-light">
+              Interested in collaboration or have a project in mind? I'd love to hear from you.
+            </p>
             
-            <a
-              href="mailto:contact@bridgetsilha.com"
-              className="flex items-center gap-4 p-8 bg-slate-800 hover:bg-slate-700 transition-all group border-2 border-slate-700"
-            >
-              <Mail className="text-white group-hover:scale-110 transition-transform" size={32} />
-              <span className="text-white font-bold uppercase tracking-wide">Send Email</span>
-            </a>
+            <div className="grid sm:grid-cols-3 gap-6 mb-12">
+              <a
+                href="https://calendar.app.google/9ihLWw3LjqMUXzqz5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-8 bg-blue-700 hover:bg-blue-600 transition-all group border-2 border-blue-700"
+              >
+                <Calendar className="text-white group-hover:scale-110 transition-transform" size={32} />
+                <span className="text-white font-bold uppercase tracking-wide">Schedule Call</span>
+              </a>
+              
+              <a
+                href="mailto:contact@bridgetsilha.com"
+                className="flex items-center gap-4 p-8 bg-slate-800 hover:bg-slate-700 transition-all group border-2 border-slate-700"
+              >
+                <Mail className="text-white group-hover:scale-110 transition-transform" size={32} />
+                <span className="text-white font-bold uppercase tracking-wide">Send Email</span>
+              </a>
 
-            <a
-              href="https://drive.google.com/file/d/1wwehL024F7tROLNyS3gWA3qevL2u6nUM/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-4 p-8 bg-slate-800 hover:bg-slate-700 transition-all group border-2 border-slate-700"
-            >
-              <FileText className="text-white group-hover:scale-110 transition-transform" size={32} />
-              <span className="text-white font-bold uppercase tracking-wide">View Resume</span>
-            </a>
-          </div>
+              <a
+                href="https://drive.google.com/file/d/1wwehL024F7tROLNyS3gWA3qevL2u6nUM/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-8 bg-slate-800 hover:bg-slate-700 transition-all group border-2 border-slate-700"
+              >
+                <FileText className="text-white group-hover:scale-110 transition-transform" size={32} />
+                <span className="text-white font-bold uppercase tracking-wide">View Resume</span>
+              </a>
+            </div>
 
-          <div className="flex justify-center gap-6 pl-12">
-            <a
-              href="https://linkedin.com/in/bridgetsilha"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-4 bg-slate-800 hover:bg-blue-700 transition-all text-white border-2 border-slate-700 hover:border-blue-700"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={28} />
-            </a>
-            <a
-              href="https://github.com/bsilha"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-4 bg-slate-800 hover:bg-blue-700 transition-all text-white border-2 border-slate-700 hover:border-blue-700"
-              aria-label="GitHub"
-            >
-              <Github size={28} />
-            </a>
+            <div className="flex justify-center gap-6">
+              <a
+                href="https://linkedin.com/in/bridgetsilha"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 bg-slate-800 hover:bg-blue-700 transition-all text-white border-2 border-slate-700 hover:border-blue-700"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={28} />
+              </a>
+              <a
+                href="https://github.com/bsilha"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 bg-slate-800 hover:bg-blue-700 transition-all text-white border-2 border-slate-700 hover:border-blue-700"
+                aria-label="GitHub"
+              >
+                <Github size={28} />
+              </a>
+            </div>
           </div>
         </div>
       </section>
